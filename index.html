@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web App</title>
+    <link href="../static/css/main2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+	<a class ="btn btn-danger" role="button" href="/download-table"
+     download="format">
+    Download Format </a>
+  <h1>Maxis Big Data COE GeoCoding Service</h1>
+  <h3> Please upload a file with a column 'Address'</h3>
+  {% with messages = get_flashed_messages() %}
+     {% if messages %}
+       {% for message in messages %}
+         <h3>{{message}}</h3>
+       {% endfor %}
+       {% endif %}
+     {% endwith %}
+ <div class="message">
+    </div>
+ <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
+        <input type="file" accept=".xls" name="file"> 
+        <button type="submit"> Submit </button>
+    </form>
+	<div class="output">
+        <h3>{{ text | safe }}</h3>
+        {% include btn ignore missing %}
+    </div>
+	
+	<div>
+	<h4>Click on below buttons for Others</h4>
+		<a href="/reverse" target="_blank">ReverseGeoCoding</a>
+	    <a href="/distance" target="_blank">GeoCode Distance Calculator</a>
+	</div>
+		
+    </div>	
+</body>
+</html>

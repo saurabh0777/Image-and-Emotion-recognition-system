@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Query Bot</title>
+    <script src="static/js/jquery-1.11.1.min.js"></script>
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript">
+document.getElementById("title").innerHTML = "Query Bot"
+
+$(document).ready(function(){
+
+   $('#content').load("http://127.0.0.1:8000/dictionary");
+
+});
+
+</script>
+<div id="content"></div>
+
+{% endblock %}
+</html>

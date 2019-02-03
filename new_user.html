@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New User</title>
+</head>
+{% extends "layout.html" %}
+{% block content %}
+<body>
+<style>
+ .error {
+    display:none;
+    color:red;
+}
+</style>
+
+ <h2>New user registration</h2>
+ <h3> Please enter your name </h3>
+
+
+ <form id="form2" action="/newuser" method="POST" enctype="multipart/form-data" align="left">
+  First name:<br>
+  <input type="text" name="firsttname" id="name"> <span id="wrongname" class="error">*This is a required field</span>
+  <br>
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" id="lname"> <span id="wronglname" class="error">*This is a required field</span>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+<script>
+function ValidateForm() {
+
+    var hasError = false;
+
+    if (document.getElementById('lname').value == "") {
+        document.getElementById('wronglname').style.display = "inline";
+        hasError = true;
+    } else {
+        document.getElementById('wrongname').style.display = "none";
+    }
+        if (document.getElementById('name').value == "") {
+        document.getElementById('wrongname').style.display = "inline";
+        hasError = true;
+    } else {
+        document.getElementById('wrongname').style.display = "none";
+    }
+
+    return !hasError;
+}
+
+
+document.getElementById('form2').onsubmit = ValidateForm;
+</script>
+
+</body>
+{% endblock %}
+</html>

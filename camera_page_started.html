@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Camera</title>
+<script src="static/js/jquery-3.3.1.min.js"> </script>
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+$.ajax({
+    url: '/trigger',
+    type: 'POST',
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    data: JSON.stringify("{{ firsttname }}"),
+    success: function(response) {
+               window.location='/camera_stopped'
+            }
+})
+
+});
+
+  </script>
+
+<body>
+ <h2>Application Started !! </h2>
+
+</body>
+{% endblock %}
+</html>

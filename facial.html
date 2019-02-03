@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Facial Recognition</title>
+</head>
+<script src="static/js/jquery-3.3.1.min.js"> </script>
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript">
+document.getElementById("title").innerHTML = "Face Recognition App"
+</script>
+
+<div class="container">
+
+   <div class="jumbo">
+    <h1>Are you new visitor ?</h1>
+   </form>
+
+  <form id="form1" action="/selectmenu" method="POST" enctype="multipart/form-data">
+    <select id="mySelect" name = "choice">
+      <option value="y">Yes</option>
+      <option value="n">No</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+
+  </div>
+</div>
+
+{% endblock %}
+</html>

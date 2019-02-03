@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Driving Value Creation through Intelligence</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Welcome to the world of Data Science" />
+        <meta name="keywords" content="jquery, circular menu, navigation, round, bubble"/>
+        <link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen"/>
+
+
+        <script src="static/js/jquery-3.3.1.min.js"> </script>
+        <script src="static/js/particles.min.js"></script>
+        <script src="static/js/stats.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+
+</script>
+
+<style>
+<!--#slideshow {
+float: right;
+  margin: 80px auto;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+float: right;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}-->
+
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Arial;
+                background:#fff url(static/images/bg.png) no-repeat top left;
+            }
+            .title{
+                width:548px;
+                height:119px;
+                position:absolute;
+                top:600px;
+                left:170px;
+                background:transparent url(static/images/title.png) no-repeat top left;
+            }
+            .maxlogo{
+                width:200px;
+                height:100px;
+                position:absolute;
+                top:30px;
+                right:20px;
+                background:transparent url(static/images/maxlogo.png) no-repeat top left;
+            }
+           #content{
+                margin:0 auto;
+            }
+
+$text: #fff;
+$link: #e34234;
+$link-hover: #ba160c;
+$background: #00356B;
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+	background: $background
+}
+
+.text {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%,-50%);
+	color: $text;
+	max-width: 90%;
+	padding: 2em 3em;
+	background: rgba(0, 0, 0, 0.4);
+	text-shadow: 0px 0px 2px #131415;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-size: 2.25em;
+	font-weight: 700;
+	letter-spacing: -1px;
+}
+
+a,
+a:visited {
+	color: $link;
+	transition: 0.25s;
+}
+
+a:hover,
+a:focus {
+	color: $link-hover;
+}
+
+        </style>
+    </head>
+
+    <body>
+    <div id="particles-js">
+        <div id="content">
+            <div class="title"></div>
+            <div class="maxlogo"></div>
+
+            <div class="navigation" id="nav">
+
+
+                <div class="item camera">
+                    <img src="static/images/bg_camera.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="{{ url_for('facial') }}" class="icon"></a>
+                    <h2>Vision</h2>
+                    <ul>
+                        <!--<li><a href="{{ url_for('facial') }}">Facial Recognition</a></li>-->
+                        <!--<li><a href="#">Prints</a></li>
+                        <li><a href="#">Submit</a></li>-->
+                    </ul>
+                </div>
+
+                 <div class="item home">
+                    <img src="static/images/bg_home.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Speech</h2>
+                    <ul>
+                        <!--<li><a href="{{ url_for('voice') }}">Voice Recognition</a></li>-->
+                        <!--<li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>-->
+                    </ul>
+                </div>
+                <div class="item shop">
+                    <img src="static/images/bg_shop.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" onclick="window.open('static/images/MaxSlides.gif','_blank', 'width=800,height=800')" class="icon"></a>
+                    <h2>M.A.X.</h2>
+                    <ul>
+                       <!-- <li><a href="http://127.0.0.1:8000/dictionary">Query Bot</a></li>-->
+                      <!--  <li><a href="#">Orders</a></li>
+                        <li><a href="#">Offers</a></li>-->
+                    </ul>
+                </div>
+                 <div class="item user">
+                    <img src="static/images/bg_user.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="http://127.0.0.1:8000/dictionary" class="icon"></a>
+                    <h2>Query Bot</h2>
+                    <ul>
+                       <!-- <li><a href="#">Vision</a>
+                        <li><a href="#">Privacy</a></li>-->
+                    </ul>
+                </div>
+                <div class="item about">
+                    <img src="static/images/bg_fav.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>About Us</h2>
+                    <ul>
+                        <!-- <li><a href="#">Vision</a>
+                        <li><a href="#">Privacy</a></li>-->
+                    </ul>
+                </div>
+                 <div class="item fav">
+                    <img src="static/images/bg_fav.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" onclick="window.open('static/images/max_framework.png','_blank', 'width=800,height=800')" class="icon"></a>
+                     <h2>Ambition</h2>
+                    <ul>
+                        <!--<li><a href="#">Support</a></li>
+                        <li><a href="#">Comments</a></li>-->
+                    </ul>
+                </div>
+                <div class="item Geo">
+                    <img src="static/images/Geo.jpg" alt="" width="199" height="199" class="circle"/>
+                    <a href="{{ url_for('geo') }}" class="icon"></a>
+                    <h2>Geo Service</h2>
+                    <ul>
+                        <!--<li><a href="{{ url_for('facial') }}">Facial Recognition</a></li>-->
+                        <!--<li><a href="#">Prints</a></li>
+                        <li><a href="#">Submit</a></li>-->
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- The JavaScript -->
+
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('img').stop().animate({
+                        'width'     :'199px',
+                        'height'    :'199px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'52px',
+                        'height'    :'52px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+        </div>
+   <!-- <div id="slideshow" >
+        <div>
+     <img src="static/images/site_Joel.jpg">
+   </div>
+   <div>
+     <img src="static/images/site_Ashley.jpg">
+   </div><div>
+     <img src="static/images/site_fazil.jpg">
+   </div>
+        </div>
+    </div>-->
+    <script type="text/javascript">
+// ParticlesJS Config.
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 700
+      }
+    },
+    "color": {
+      "value": "#000000"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#000000",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+
+</script>
+
+       </body>
+
+ </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web App</title>
+    <link href="../static/css/main2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+    <h1>Havensine Distance Calculation</h1>
+    <h3> Please upload your file with columns 'Latitude' and 'Longitude'</h3>
+    <div class="message2">
+    </div>
+    <form action="{{url_for('Caldist')}}" method="POST" enctype="multipart/form-data">
+        <input type="file" accept=".xls" name="file"> 
+  Define the range <input type="number" name="range" id="range"  placeholder="Enter the range in meter"> <span id="range" class="error" ></span>
+        <br><button type="submit"> Submit </button>
+    </form>
+    </div>
+</body>
+</html>

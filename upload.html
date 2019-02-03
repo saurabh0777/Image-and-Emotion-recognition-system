@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Maxis Big Data COE </h3>
+      </div>
+      <hr/>
+      <div>
+      Click to download the output file
+      <ul>
+        {% for file in filenames %}
+          <li><a href="{{url_for('uploaded_file', filename=file)}}">{{file}}</a></li>
+        {% endfor %}
+      </ul>
+      </div>
+      <div class="header">
+      </div>
+      <hr/>    
+      </div>
+    </div>
+  </body>
+</html>
