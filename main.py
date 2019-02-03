@@ -1,11 +1,8 @@
 from flask import Flask, render_template, request, send_file,flash,redirect, url_for, send_from_directory,json
 from facial.facifier import trigger
-from werkzeug.utils import secure_filename
+
 import os
 
-from Geo.Geocoding import geocoder
-from Geo.ReverseGeo import reverseGeo
-from Geo.sitdist import caldist
 
 app = Flask(__name__)
 
