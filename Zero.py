@@ -9,7 +9,7 @@ import pyperclip
 import win32com.client
 import voice.error_route as err
 
-app_id = "P2496K-JA3U2QUWL4"
+app_id = "Key in your id"
 cl = wolframalpha.Client(app_id)                                                        #api for wolfram alpha
 v = win32com.client.Dispatch("SAPI.SpVoice")
 
@@ -18,7 +18,7 @@ r.pause_threshold = 0.7                                                         
 r.energy_threshold = 4000
 
 shell = win32com.client.Dispatch("WScript.Shell")                                           #to handle keyboard events
-v.speak('Hello, I am Zero & I am a work in Progress of being Maxis first Artificial Intelligence Synthetic Assistant, Please ask a question or say "Alpha" for the Quick Commands...')
+v.speak('Hello, I am Zero & I am a work in Progress of')
 #print("Please ask a question or say 'Keyword' for the Commands'...")
 
 #List of Available Commands
